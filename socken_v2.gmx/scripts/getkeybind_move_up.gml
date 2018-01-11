@@ -1,0 +1,2 @@
+
+return ord('W');
