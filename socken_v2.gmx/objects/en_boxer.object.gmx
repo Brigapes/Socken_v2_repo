@@ -167,6 +167,7 @@ trans_anim=spr_boxer_trans;
 crit_anim=spr_boxer_damaged;
 
 knockback_anim=spr_boxer_damaged;
+
 </string>
           </argument>
         </arguments>
@@ -943,6 +944,7 @@ nof_pushback(x,y-80,1, string(image_index), 1);
             <kind>1</kind>
             <string>///NADE KNOCKBACK
 if(state=="knockback"){
+//move_bounce_all(true);
 kno_dir=nade_dir+180;
 if(last_state=="pathfinding"){path_end();}
 //image
@@ -963,7 +965,7 @@ if(kno_speed&lt;=0){
     state=last_state;
 }
 
-}
+} 
 </string>
           </argument>
         </arguments>

@@ -34,6 +34,9 @@ timer_max=3600;
 
 image_speed=0;
 
+//set_image_scale(get_image_nadescale());
+
+///*  TEMP CHANGE
 if(irandom_range(1,100)&gt;50){
 image_index=1;
 }else{
@@ -68,6 +71,13 @@ image_alpha-=0.05;
 if(image_alpha&lt;0.3){
 instance_destroy();
 }}
+
+//sprite_get_number(index);
+/*
+if(image_index=floor(sprite_get_number(spr_explosion_impact))-1){
+image_index=floor(sprite_get_number(spr_explosion_impact)-1);
+image_speed=0;
+}*/
 </string>
           </argument>
         </arguments>

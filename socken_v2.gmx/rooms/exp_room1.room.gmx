@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>1179</xoffset>
-    <yoffset>2693</yoffset>
+    <xoffset>1309</xoffset>
+    <yoffset>3386</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="0"/>
@@ -103,8 +103,8 @@
     <instance objName="wall" x="2644" y="2738" name="inst_7CBF0EAA" locked="-1" code="" scaleX="1.5" scaleY="11" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="3206" y="3236" name="inst_F197C7AE" locked="-1" code="" scaleX="2.01999998092651" scaleY="4.78125" colour="4294967295" rotation="0"/>
     <instance objName="en_boxer" x="1532" y="4366" name="inst_D68363E6" locked="0" code="state=&quot;idle&quot;;&#xA;&#xA;hp=3000;&#xA;&#xA;hp_over_max=5000;&#xA;hp_over_decay=0.01;&#xA;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="en_boxer" x="2390" y="4370" name="inst_5D987AE8" locked="0" code="//state=&quot;trans_from_path&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="en_boxer" x="2556" y="4368" name="inst_7204207A" locked="0" code="state=&quot;trans_from_path&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="en_boxer" x="2390" y="4370" name="inst_5D987AE8" locked="0" code="//state=&quot;trans_from_path&quot;;&#xA;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="en_boxer" x="2556" y="4368" name="inst_7204207A" locked="0" code="//state=&quot;trans_from_path&quot;;&#xA;&#xA;walk_anim=spr_boxer_idle;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_dust2" x="0" y="0" w="1000" h="1000" xo="0" yo="0" id="10000006" name="inst_216EF3C0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
