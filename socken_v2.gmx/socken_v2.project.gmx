@@ -2,6 +2,7 @@
 <assets>
   <Configs name="configs">
     <Config>Configs\Default</Config>
+    <Config>Configs\Test</Config>
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
@@ -31,6 +32,7 @@
       <sprites name="old">
         <sprite>sprites\spr_boxer_dmg</sprite>
       </sprites>
+      <sprite>sprites\spr_explosioncrater</sprite>
     </sprites>
     <sprites name="weapons">
       <sprite>sprites\spr_ak47_mockup</sprite>
