@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>20</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -105,13 +105,14 @@ direction=player.direction;
 
 if(get_is_playermoving()){
 
-var sprite = spr_legs;
+var sprite = get_direction_playermove_walksprite();
 
-var rot = get_direction_playermove();
+var rot = player.image_angle;
 
 //nof_pushback(x,y,0,string(rot),1);
 
-if(legs_timer&gt;=sprite_get_number(sprite)){
+if(legs_timer&gt;=sprite_get_number(sprite))
+{
 legs_timer=0;
 }
 else {legs_timer+=0.5;}
@@ -141,54 +142,31 @@ draw_sprite_ext(sprite,legs_timer,x,y,get_player_scale(),get_player_scale(),rot,
             <kind>1</kind>
             <string>///arms body
 
-var sprite = spr_player_arms;
-
 var rot = player.image_angle; //get_direction_playermove();
 
-//nof_pushback(x,y,0,string(rot),1);
+var sprite_left = global.knock_left_arm_anim;
+var sprite_right = global.knock_right_arm_anim;
 
-if(arms_timer&gt;=sprite_get_number(sprite)){
+var maxframe=floor(sprite_get_number(sprite_right)-1);
+
+//nof_pushback(x,y,0,string(rot),1);
+if(global.knock_state){
+if(arms_timer&gt;=sprite_get_number(sprite_right)){
 arms_timer=0;
 }
-else {arms_timer+=0.5;}
-
-draw_sprite_ext(sprite,arms_timer,x,y,get_player_scale(),get_player_scale(),rot,c_white, 1);
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Upper body
-
-var sprite = spr_player_upper;
-
-var rot = player.image_angle; //get_direction_playermove();
-
-//nof_pushback(x,y,0,string(rot),1);
-
-if(upper_timer&gt;=sprite_get_number(sprite)){
-upper_timer=0;
+else {arms_timer+=1;}
 }
-else {upper_timer+=0.5;}
+else{
+if(arms_timer!=maxframe){
+arms_timer+=1;}
+else{arms_timer=maxframe;}}
 
-draw_sprite_ext(sprite,upper_timer,x,y,get_player_scale(),get_player_scale(),rot,c_white, 1);
+if(global.init_knock){arms_timer=0;}
+
+//nof_pushback(x,y,0,string(floor(sprite_get_number(sprite_right)-1)),0);
+
+draw_sprite_ext(sprite_left,arms_timer,x,y,get_player_scale(),get_player_scale(),rot,c_white, 1);
+draw_sprite_ext(sprite_right,arms_timer,x,y,get_player_scale(),get_player_scale(),rot,c_white, 1);
 
 
 </string>

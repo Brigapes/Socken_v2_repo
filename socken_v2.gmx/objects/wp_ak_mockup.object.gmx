@@ -3,7 +3,7 @@
   <spriteName>spr_ak47_mockup</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>10</depth>
+  <depth>-10</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -98,11 +98,13 @@ if(kick_in){
     kick=kick_max;
     kicked=true;
     kick_in=false;
+    global.init_knock=false;
+    global.knock_int=kick_max;
 }
 
 if(kicked){
     kick-=1.25;
-    if(kick&lt;=0){kick=0;kicked=false;}
+    if(kick&lt;=0){kick=0;kicked=false;global.knock_state=false;}
 }
 
 speed=kick;
@@ -142,6 +144,8 @@ timer=fr_max+1;
         instance_create(x,y,wp_projectile);
         timer=0;
         kick_in=true;
+        global.knock_state=true;
+        global.init_knock=true;
 }}
 
 

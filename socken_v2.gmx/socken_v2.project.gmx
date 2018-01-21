@@ -80,6 +80,22 @@
     <sprites name="Decals">
       <sprite>sprites\spr_decal_blood1</sprite>
     </sprites>
+    <sprites name="Player">
+      <sprites name="Walk_anims">
+        <sprite>sprites\spr_walk_0</sprite>
+        <sprite>sprites\spr_walk_45</sprite>
+        <sprite>sprites\spr_walk_90</sprite>
+        <sprite>sprites\spr_walk_135</sprite>
+        <sprite>sprites\spr_walk_180</sprite>
+        <sprite>sprites\spr_walk_225</sprite>
+        <sprite>sprites\spr_walk_270</sprite>
+        <sprite>sprites\spr_walk_315</sprite>
+      </sprites>
+      <sprites name="knockback_anim">
+        <sprite>sprites\spr_knock_default_left_25px_60fps</sprite>
+        <sprite>sprites\spr_knock_default_right_25px_60fps</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_dust2_lowres</background>
@@ -124,6 +140,11 @@
       <scripts name="Generic">
         <script>scripts\get_weapon_len.gml</script>
         <script>scripts\get_rifle_dmg.gml</script>
+        <scripts name="Knockback">
+          <script>scripts\get_is_knockback_state.gml</script>
+          <script>scripts\get_is_init_knock.gml</script>
+          <script>scripts\get_knockback_int_frame.gml</script>
+        </scripts>
       </scripts>
     </scripts>
     <scripts name="Abilities">
@@ -168,6 +189,7 @@
       <script>scripts\get_player_scale.gml</script>
       <script>scripts\get_is_playermoving.gml</script>
       <script>scripts\get_direction_playermove.gml</script>
+      <script>scripts\get_direction_playermove_walksprite.gml</script>
     </scripts>
     <scripts name="Math">
       <script>scripts\set_array_doesntwork.gml</script>
@@ -202,7 +224,8 @@
     </objects>
     <objects name="Player">
       <object>objects\player</object>
-      <object>objects\player_draw</object>
+      <object>objects\player_draw_below</object>
+      <object>objects\player_draw_above</object>
     </objects>
     <objects name="ShootNForget">
       <object>objects\SNF_room_goto</object>

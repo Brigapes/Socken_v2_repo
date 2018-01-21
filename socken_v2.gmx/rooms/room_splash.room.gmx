@@ -50,19 +50,41 @@ enemy[2]="des_wall_br";
 
 
 /////////////// MOVEMENT
+///Legs
+globalvar walk_anim_0;
+walk_anim_0=spr_walk_0;
+globalvar walk_anim_90;
+walk_anim_90=spr_walk_90;
+globalvar walk_anim_135;
+walk_anim_135=spr_walk_135;
+globalvar walk_anim_180;
+walk_anim_180=spr_walk_180;
+globalvar walk_anim_225;
+walk_anim_225=spr_walk_225;
+globalvar walk_anim_270;
+walk_anim_270=spr_walk_270;
+globalvar walk_anim_315;
+walk_anim_315=spr_walk_315;
 
 
 
 
+////////////////Knockback
+///State
+globalvar knock_state;
+knock_state=false;
+globalvar init_knock;
+init_knock=false;
+globalvar knock_int;
+knock_int = 25;
 
-//nof[i]
+///Arms
+globalvar knock_left_arm_anim;
+knock_left_arm_anim = spr_knock_default_left_25px_60fps;
+globalvar knock_right_arm_anim;
+knock_right_arm_anim = spr_knock_default_right_25px_60fps;
 
-///Grid array fill NVM NE RABIM
-/*
-globalvar cell_boxer;
-for(var i=0;i&lt;999;i++){
-cell_boxer[i]=0;
-}*/
+
 //////////DEBUG
 globalvar debug;
 global.debug=true;
@@ -84,7 +106,7 @@ camera_shake_limit = 30;</code>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1008</w>
+    <w>1016</w>
     <h>600</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
@@ -95,8 +117,8 @@ camera_shake_limit = 30;</code>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>1</page>
-    <xoffset>-89</xoffset>
-    <yoffset>-93</yoffset>
+    <xoffset>-190</xoffset>
+    <yoffset>-220</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="bg_temp" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>

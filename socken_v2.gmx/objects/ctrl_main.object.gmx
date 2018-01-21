@@ -317,8 +317,14 @@ room_restart();
             <string>///spawn player_draw
 
 if(instance_exists(player)){
-    if(!instance_exists(player_draw)){
-    instance_create(player.x,player.y,player_draw);
+    if(!instance_exists(player_draw_below)){
+    instance_create(player.x,player.y,player_draw_below);
+    }
+}
+
+if(instance_exists(player)){
+    if(!instance_exists(player_draw_above)){
+    instance_create(player.x,player.y,player_draw_above);
     }
 }
 </string>
